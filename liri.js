@@ -89,11 +89,12 @@ function doWhatItSays() {
     const readFileArray = fs.readFileSync(`random.txt`).toString().split(',');
     const command = readFileArray[0];
     const paramater = readFileArray[1].replace(/["]/g, "");
+    console.log(command, paramater);
 
     heyLiri(command, paramater);
 
 }
-//function with switch syntax so each function runs based on command input
+
 function heyLiri(command, param) {
     switch (command) {
         case `concert-this`:
@@ -111,5 +112,4 @@ function heyLiri(command, param) {
     }
 }
 
-//initialize app
 heyLiri(liriCommand, liriParam);
