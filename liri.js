@@ -40,7 +40,6 @@ function concertThis(artist) {
             const output = `Name of Venue: ${event.venue.name}\nVenue Location: ${event.venue.city}\nDate of Event: ${moment(event.datetime).format("MM/DD/YYYY")}`;
             console.log(output);
             logtxt(output);
-
         }
     });
 }
